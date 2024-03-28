@@ -1,0 +1,26 @@
+$background-color-landing: #0B0B0F;
+$background_color-gray: #1A1B23;
+
+$white-color-text: #FFFFFF;
+$grey-color-text: #898CA9;
+$grey-footer:#565d5f;
+$purple-color-text: #B982FF;
+$grey-divider: #2B2C3B;
+$green-text: #0DBB7C;
+$red-text: #FF8282;
+
+
+$input-gradient: linear-gradient(180deg, rgba(0,194,255,1) 0%, rgba(147,63,254,1) 100%);
+$input-background: rgb(0,194,255);
+
+///btn 
+$btn-gradient-blue: linear-gradient(220deg, rgba(24,185,255,1) 0%, rgba(147,63,254,1) 100%);
+$btn-white-gradient: rgba($color: $white-color-text, $alpha: 0.3);
+
+// gradient-image
+$gradient-image-color-green:linear-gradient(180deg, rgba(24,255,158,0) 0%, rgba(23,255,227,1) 100%);
+
+// @mixin decoration-element() {
+//   position: absolute;
+//   z-index: 3;
+// }

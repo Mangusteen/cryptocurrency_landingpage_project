@@ -1,0 +1,103 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:regular,500,600,700,800,900);
+@import './_mixins';
+@import 'normalize.css';
+@import './_variables.scss';
+@import './_nullstyle.scss';
+@import './_btn';
+
+@import './_text-block';
+
+body {
+  font-family: Inter;
+  @include fw(400);
+  color: $white-color-text;
+  @media (max-width: 992px) {
+    &.lock {
+      overflow: hidden
+    }
+  }
+}
+
+#wrapper {
+  @include width-height(100%, 100%);
+  overflow: hidden;
+  background-color: $background-color-landing;
+
+  // header --------------------------------------------------------------------------------------
+  @import './_header';
+
+  // main --------------------------------------------------------------------------------------
+  @import './_main';
+  
+  // footer -------------------------------------------------------------------------------------------
+  @import './_footer';
+
+}
+
+
+
+
+
+
+
+.container {
+  max-width: 1210px;
+  margin: 0 auto;
+  @media (max-width: 1278px){
+    padding: 0px 25px;
+  }
+
+}
+
+
+.form {
+  
+  // .form__input
+
+  &__input {
+    position: relative;
+    @include width-height(302px, 55px);
+    // cursor: pointer;
+  }
+
+  // .form__label
+
+  &__label {
+    display: inline-flex; // для бордера инпута
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        @include top-right(-2px, -2px);
+        left: -2px; // для бордера инпута
+        bottom: -2px; // для бордера инпута
+        background: $input-gradient;
+        border-radius: 10px;
+        z-index: 1;
+      }
+      input {
+        // @include width-height(302px, 55px);
+        padding: 16px 20px;
+        outline: none;
+        border-radius: 10px;
+        border: none;
+        border: 1px solid transparent; // для бордера инпута
+        background: $background-color-landing; // для бордера инпута 
+        color: $white-color-text;
+        z-index: 2;
+        &::placeholder {
+          color: $grey-color-text;
+          @include fz-fw(0.875rem, 400);
+          line-height: 150%;
+        }
+        // @media (max-width: 499px) {
+        //   @include width-height(262px, 55px);
+        // }
+      }
+      &:hover {
+        opacity: .6;
+        transition: all 0.3s ease 0s;
+      }
+  }
+}
+

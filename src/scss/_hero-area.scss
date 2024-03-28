@@ -1,0 +1,222 @@
+.hero-area {
+  padding: 170px 0px;
+  @include display-alc();
+  position: relative;
+  @media (max-width: 1278px) {
+    padding: 100px 0px;
+  }
+  @media (max-width: 499px) {
+    padding: 40px 0px;
+  }
+  &__container {
+    // position: relative;
+    &::before {
+      content: url(../images/hero_area/Ellipse_1.png);
+      position: absolute;
+      top: 2%;
+      left: 0;
+      transform: translate(4%, 4%);
+      // z-index: -1;
+
+    }
+    &::after {
+      content: url(../images/hero_area/Ellipse_2.png);
+      position: absolute;
+      top: -10%;
+      left: 0;
+      transform: translate(-12%, -1%);
+      // z-index: -1;
+    }
+  }
+
+  // .hero-area__body
+
+  &__body {
+    @include display-alc();
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    &::after {
+      content: url(../images/hero_area/Ellipse_3.png);
+      position: absolute;
+      top: -70%;
+      left: -52%;
+      transform: translate(-11%, -6%)
+    }
+  }
+  // .hero-area__title
+  
+  &__title {
+    @include fz-fw(5.31rem, 900);
+    line-height: 130%;
+    margin-bottom: 16px;
+    max-width: 780px;
+    z-index: 10;
+    @media (max-width: 1024px) {
+      font-size: 4.35rem;
+    }
+    @media (max-width: 768px) {
+      font-size: 3.35rem;
+    }
+    @media (max-width: 499px) {
+      font-size: 2.25rem;
+    }
+  }
+
+  // .hero-area__text
+
+  &__text {
+    font-size: 1rem;
+    color: $grey-color-text;
+    margin-bottom: 32px;
+    max-width: 580px;
+    z-index: 10;
+  }
+
+  // .hero-area__btn
+
+  &__btn {
+    z-index: 100;
+  }
+
+  &__elipse {
+    @include decoration-element();
+    @include transform-translate(-40%, -10%);
+    top: -20% ;
+    z-index: 1;
+    display: none;
+  }
+  &__bitcoin {
+    @include decoration-element();
+    @include transform-translate(-30%, -50%);
+    left: 8%;
+    top: 10%;
+    @media (min-width: 768px) {
+      top: 10%;
+    }
+    @media (max-width: 1278px) {
+      display: none;
+    }
+  }
+  &__star-1 {
+    @include decoration-element();
+    @include transform-translate(-30%, -60%);
+    left: 16%;
+    top: 28%;
+    @media (min-width: 768px) {
+      top: 20%;
+    }
+    @media (max-width: 1278px) {
+      display: none;
+    }
+  }
+  &__sphere-orange {
+    @include decoration-element();
+    left: 4%;
+    // top: 72%;
+    @media (min-width: 768px) {
+      top: 40%;
+    }
+    @media (max-width: 1278px) {
+      display: none;
+    }
+  }
+  &__lite-coin {
+    @include decoration-element();
+    left: 11%;
+    bottom: 5%;
+    @media (max-width: 1278px) {
+      display: none;
+    }
+  }
+  &__star-2 {
+    @include decoration-element();
+    @include top-right(5%, 18%);
+    @media (max-width: 1278px) {
+      display: none;
+    }
+  }
+  &__star-3 {
+    @include decoration-element();
+    @include top-right(12%, 11%);
+    @media (max-width: 1278px) {
+      display: none;
+    }
+  }
+  &__monero-coin {
+    @include decoration-element();
+    @include top-right(19%, 11%);
+    @media (max-width: 1278px) {
+      display: none;
+    }
+  }
+  &__sphere-violet {
+    @include decoration-element();
+    @include transform-translate(-45%, -85%);
+    right: -10%;
+    @media (max-width: 1278px) {
+      display: none;
+    }
+  }
+  &__etherium-coin {
+    @include decoration-element();
+    @include transform-translate(-170%, -85%);
+    right: 0;
+    bottom: -15%;
+    @media (max-width: 1278px) {
+      display: none;
+    }
+  }
+  &__star-4 {
+    @include decoration-element();
+    @include transform-translate(50%, 0%);
+    right: 13%;
+    bottom: 3%;
+    @media (max-width: 1278px) {
+      display: none;
+    }
+  }
+  // &__texture-1 {
+  //   position: absolute;
+  //   top: -30%;
+  //   left: 0;
+  //   opacity: .7;
+  //   display: none;
+  //   @media (max-width: 499px) {
+  //     display: none;
+  //   }
+  // }
+  // &__texture-2 {
+  //   position: absolute;
+  //   top: 0;
+  //   bottom: 0;
+  //   right: 0;
+  //   opacity: .7;
+  //   display: none;
+  //   @media (max-width: 992px) {
+  //     display: none;
+  //   }
+  // }
+  &__rect {
+    @include gradient-image(290px, 410px, 80px);
+    bottom: 6%;
+    right: -2%;
+    background: linear-gradient(180deg, rgba(24,75,255,0.017331932773109293) 0%, rgba(23,74,255,1) 100%);
+    @media (max-width: 992px) {
+      width: 150px;
+      height: 200px;
+    }
+  }
+  &__round {
+    @include gradient-image(600px, 600px, 80px);
+    border-radius: 50%;
+    bottom: 16%;
+    right: -12%;
+    background: linear-gradient(180deg, rgba(0,194,255,0.017331932773109293) 0%, rgba(117,124,228,0.48792016806722693) 50%, rgba(184,84,212,0.7288165266106443) 70%, rgba(255,41,195,1) 100%);
+    @media (max-width: 992px) {
+      width: 200px;
+      height: 200px;
+    }
+  }
+}

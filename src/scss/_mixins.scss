@@ -1,0 +1,48 @@
+@mixin border($color) {
+  border: 1px solid $color;
+}
+
+@mixin background($background) {
+  background: $background;
+}
+
+@mixin gradient-image($width, $height, $blur) {
+  content: '';
+  position: absolute;
+  width: $width;
+  height: $height;
+  filter: blur($blur)
+}
+
+@mixin decoration-element() {
+  position: absolute;
+  z-index: 3;
+}
+
+@mixin transform-translate($x, $y) {
+  transform: translate($x, $y);
+}
+
+@mixin display-alc {
+  display: flex;
+  align-items: center;
+}
+
+@mixin fz-fw($fz, $fw) {
+  font-size: $fz;
+  font-weight: $fw;
+}
+
+@mixin fw($fw) {
+  font-weight: $fw;
+}
+
+@mixin top-right($top, $right) {
+  top: $top;
+  right: $right;
+}
+
+@mixin width-height($width, $height) {
+  width: $width;
+  height: $height;
+}

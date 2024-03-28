@@ -1,0 +1,64 @@
+.receive {
+  padding: 80px 0px 120px;
+  @media (max-width: 992px) {
+    padding: 60px 0px 80px;
+  }
+  // .receive__container
+
+  &__container {
+    @include display-alc();
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    &::after {
+      content: url(../images/hero_area/Ellipse_3.png);
+      position: absolute;
+      top: -62%;
+      transform: rotate(155deg);
+    }
+    &::before {
+      content: url(../images/hero_area/Ellipse_2.png);
+      position: absolute;
+      top: 29%;
+      left: -25%;
+      z-index: 2;
+      transform: rotate(150deg);
+      @media (max-width: 992px) {
+        top: -2%;
+        left: -35%;
+      }
+      @media (max-width: 589px) {
+        top: -22%;
+        left: -55%;
+      }
+    }
+  }
+
+  // .receive__text
+
+  &__text {
+    @include display-alc();
+    span {
+      display: inline-block;
+      position: relative;
+      color: $white-color-text;
+      &::after {
+        content: '↗';
+        position: absolute;
+        color: $white-color-text;
+        font-size: 1.2rem;
+        top: -2px;
+
+      }
+    }
+  }
+
+  // .receive__form
+
+  &__form {
+    text-align: center;
+  }
+
+
+
+}

@@ -1,0 +1,49 @@
+.btn {
+  @include border(rgba($color: $white-color-text, $alpha: 0.3));
+  @include fz-fw(1rem, 600);
+  border-radius: 10px;
+  outline: none;
+  padding: 20px 33px;
+  color: $white-color-text;
+  z-index: 10;
+  cursor: pointer;
+    &_gradient {
+      background: $btn-gradient-blue;
+      &:hover {
+        transition: all 0.3s ease 0s;
+        opacity: .7;
+      }
+    }
+    &_border {
+      border: 1px solid $white-color-text;
+      background-color: $background-color-landing;
+      &:hover {
+        border: 1px solid  $purple-color-text;
+        color: $purple-color-text;
+        transition: all 0.3s ease 0s;
+      }
+    }
+    &_arrow {
+      display: flex;
+      align-items: center;
+      justify-content:stretch;
+      color: $purple-color-text;
+      &:hover {
+        color: $white-color-text;
+        transition: all 0.3s ease 0s;
+      }
+      img {
+        width: 10px;
+      }
+      p {  
+        display: inline-block;
+        margin-right:4px;
+        @media (max-width: 499px) {
+          margin-right:0;
+        }
+      }
+      @media (max-width: 499px) {
+        justify-content:center;
+      }
+    }
+}

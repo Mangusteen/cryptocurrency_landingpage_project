@@ -1,0 +1,92 @@
+.secure-investing {
+  padding: 80px 0px;
+  @media (max-width: 992px) {
+    padding: 60px 0px;
+  }
+  // .secure-investing__container
+
+  &__container {
+    @include display-alc();
+    justify-content: space-between;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  // .secure-investing__content
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    // &::after {
+    //   content: url(../images/secure-investing/Group_1.png);
+    //   position: absolute;
+    //   @include top-right(0, 0);
+    //   transform: translate(100%, -30%);
+    //   z-index: 2;
+    //   display: none;
+    // }
+    @media (max-width: 768px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  // .secure-investing__text
+
+  &__text {
+    max-width: 580px;
+  }
+
+  // .secure-investing__image
+
+  &__image-container {
+    flex: 0 0 50%;
+    text-align: center;
+    position: relative;
+    &::before {
+      @include gradient-image(275px, 390px, 100px);
+      bottom: -25%;
+      right: 8%;
+      background: linear-gradient(180deg, rgba(24,75,255,0) 0%, rgba(23,74,255,1) 100%);
+      z-index: 1;
+    }
+    &::after {
+      @include gradient-image(575px, 575px, 100px);
+      @include top-right(-90%, -17%);
+      border-radius: 50%;
+      background: linear-gradient(180deg, rgba(0,194,255,0.020133053221288555) 0%, rgba(130,116,225,0.499124649859944) 50%, rgba(255,41,195,1) 100%);
+    }
+  }
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    
+    &::after {
+      content: url(../images/hero_area/star_3.svg);
+      position: absolute;
+      @include top-right(-4%, 10%);
+      z-index: 5;
+    }
+    &::before {
+      content: url(../images/hero_area/star_2.svg);
+      position: absolute;
+      bottom: 6%;
+      right: -2%;
+      z-index: 5;
+      @media (max-width: 992px) {
+        right: -30%;
+      }
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+    img {
+    z-index: 5;
+    @media (max-width: 768px) {
+      max-width: 80%;
+    }
+    }
+  }
+}

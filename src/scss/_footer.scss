@@ -1,0 +1,147 @@
+
+.footer {
+  padding: 100px 0px 90px;
+  @media (max-width: 1278px) {
+    padding: 80px 0px 60px;
+  }
+  @media (max-width: 992px) {
+    padding: 60px 0px 40px;
+  }
+  @include fw(400);
+  position: relative;
+  color: $grey-footer;
+  &::before {
+    @include width-height(100%, 1px);
+    content: '';
+    position: absolute;
+    top: 0;
+    background-color: $background_color-gray;
+  }
+  // .footer__container
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    &::before {
+      content: url(../images/hero_area/Ellipse_1.png);
+      position: absolute;
+      top: -68%;
+      left: 0%;
+      transform: rotate(155deg);
+    }
+    @media (max-width: 992px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  // .footer__info
+  &__content {
+    display: flex;
+    flex: 0 1 50%;
+    justify-content: space-between;
+    @media (max-width: 992px) {
+      justify-content: space-around;
+      margin-bottom: 30px;
+    }
+    @media (max-width: 768px) {
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__info {
+    max-width: 380px;
+    margin-right: 50px;
+    &::after {
+      @include gradient-image(290px, 406px, 200px);
+      background: linear-gradient(90deg, rgba(24,255,158,0) 0%, rgba(23,255,227,1) 100%);
+      left: 17%;
+      top: 90%;
+      z-index: 2;
+    }
+    &::before {
+      @include gradient-image(500px, 500px, 200px);
+      left: -7%;
+      top: 57%;
+      border-radius: 50%;
+      background: linear-gradient(90deg, rgba(44,73,130,1) 0%, rgba(44,208,149,1) 100%);
+      z-index: 1;
+      @media (max-width: 992px) {
+        @include gradient-image(400px, 400px, 200px);
+      }
+    }
+    @media (max-width: 992px) {
+      margin-right: 0;
+    }
+  }
+
+  // .footer__logo
+
+  &__logo {
+    display: block;
+    margin-bottom: 32px;
+  }
+
+  // .footer__text
+
+  &__text {
+    margin-bottom: 32px;
+    line-height: 150%;
+    p {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+
+  }
+
+  &__form {
+    margin-bottom: 32px;
+    z-index: 10;
+    @extend .receive__form;
+    input {
+      background: $background_color-gray;
+    }
+  }
+
+  // .footer__nav
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 2;
+    li {
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+    @include fw(600);
+    @media (max-width: 768px) {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+
+  }
+
+  &__nav-link {
+    color: $grey-footer;
+      &:hover {
+        color: $purple-color-text;
+        transition: all 0.3s ease 0s;
+      }
+  }
+  // .footer__policy
+
+  &__policy {
+    @extend .footer__nav;
+    @include fw(400);
+  }
+
+  &__policy-link {
+    @extend .footer__nav-link;
+  }
+}

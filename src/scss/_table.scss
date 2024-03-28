@@ -1,0 +1,128 @@
+@import './_btn';
+.table {
+   max-width: 1180px;
+   background-color: $background_color-gray;
+   border-radius: 25px;
+   padding: 20px 32px;
+   z-index: 5;
+   @media (max-width: 768px) {
+      padding: 20px 24px;
+   }
+   @media (max-width: 768px) {
+      padding: 20px 16px;
+   }
+		// .table__content
+
+		&__content {
+         display: grid;
+         grid-row-gap: 30px;
+      // display: flex;
+      // flex-direction: column;
+		}
+
+		// .table__row
+
+		&__row {
+         display: grid;
+         grid-template-columns: 200px 90px 200px 150px 210px 115px;
+         justify-content: center;
+         grid-column-gap: 32px;
+         @media (max-width: 1278px) {
+            grid-template-columns: 120px 80px 140px 120px 160px 115px;
+         }
+         @media (max-width: 992px) {
+            grid-template-columns: 120px 60px 120px 120px 115px;
+         }
+         @media (max-width: 768px) {
+            grid-template-columns: 60px 80px 80px 100px;
+            grid-column-gap: 16px;
+         }
+         @media (max-width: 499px) {
+            grid-template-columns: 60px 80px 100px;
+         }
+      position: relative;
+      &:not(:last-child) {
+      &::after {
+         @include width-height(100%, 1px);
+         content: '';
+         position: absolute;
+         bottom: -16px;
+         background-color: $grey-divider;
+      }
+      }
+      
+		}
+
+		// .table__currency-fullname
+   &__currency-fullname,
+   &__currency-name,
+   &__amount, 
+		&__currency-fullname,
+   &__percent {
+      @include fz-fw(1.25rem, 700);
+      line-height: 150%;
+      @media (max-width: 992px) {
+         @include fz-fw(1rem, 700);
+      }
+   }
+   &__currency-fullname{
+      @media (max-width: 768px) {
+         display: none;
+      }
+		}
+
+		// .table__currency-name
+
+		&__currency-name {
+      // width: 91px;
+      color: $purple-color-text;
+		}
+
+		// .table__amount
+
+		&__amount {
+      // width: 231px;
+      text-align: right;
+      @media (max-width: 499px) {
+         display: none;
+      }
+		}
+
+		// .table__percent
+
+		&__percent {
+      // width: 100px;
+      text-align: right;
+      color: $green-text;
+      &_red {
+      color: $red-text;
+      }
+
+		}
+
+		// .table__graph
+
+		&__graph {
+         img {
+            max-width: 100%
+         }
+         @media (max-width: 992px) {
+            display: none;
+         }
+
+
+      // width: 213px;
+
+		}
+
+		// .table__btn
+
+		&__btn {
+      color: $white-color-text;
+      @media (max-width: 499px) {
+         img {
+            display: none;
+         }
+      }
+		}
+}
