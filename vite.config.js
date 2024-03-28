@@ -2,6 +2,6 @@ import { defineConfig } from 'vite';
 // import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  base: "/Cryptocurrency_landing_project",
+  base: "/cryptocurrency_landingpage_project",
   // plugins: [react()]
 })
