@@ -1,5 +1,4 @@
 # Cryctocurrency Landing Page Project
---
 
 I have made layout of Cryptocurrency project using **Javascript, SCSS and HTML**. Made some changes in design and added micro animations.
 
