@@ -26,6 +26,12 @@
       margin-bottom: 32px;
       max-width: 580px;
       z-index: 10;
+      a {
+        color: $white-color-text;
+        &:hover {
+          color: $purple-color-text;
+        }
+      }
       @media (max-width: 768px) {
         margin-bottom: 24px;
       }

@@ -35,11 +35,6 @@ body {
 }
 
 
-
-
-
-
-
 .container {
   max-width: 1210px;
   margin: 0 auto;
@@ -63,26 +58,25 @@ body {
   // .form__label
 
   &__label {
-    display: inline-flex; // для бордера инпута
-      position: relative;
+    display: inline-flex; 
+    position: relative;
       &::before {
         content: '';
         position: absolute;
         @include top-right(-2px, -2px);
-        left: -2px; // для бордера инпута
-        bottom: -2px; // для бордера инпута
+        left: -2px; 
+        bottom: -2px; 
         background: $input-gradient;
         border-radius: 10px;
         z-index: 1;
       }
       input {
-        // @include width-height(302px, 55px);
-        padding: 16px 20px;
+        padding: 16px 40px 16px 20px;
         outline: none;
         border-radius: 10px;
         border: none;
-        border: 1px solid transparent; // для бордера инпута
-        background: $background-color-landing; // для бордера инпута 
+        border: 1px solid transparent; 
+        background: $background-color-landing; 
         color: $white-color-text;
         z-index: 2;
         &::placeholder {
@@ -90,14 +84,28 @@ body {
           @include fz-fw(0.875rem, 400);
           line-height: 150%;
         }
-        // @media (max-width: 499px) {
-        //   @include width-height(262px, 55px);
-        // }
       }
       &:hover {
         opacity: .6;
         transition: all 0.3s ease 0s;
       }
+      &:active,
+      &:focus {
+        opacity: .6;
+        background: $background-color-landing; 
+        transition: all 0.3s ease 0s;
+      }
+  }
+  &__btn {
+    position: absolute;
+    top: 18px;
+    right: 15px;
+    z-index: 2;
+    background: $background-color-landing; 
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
   }
 }
 
