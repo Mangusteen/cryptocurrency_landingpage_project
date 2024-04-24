@@ -160,10 +160,10 @@
       color: $purple-color-text;
       transition: all 0.3s ease 0s;
     }
-      @media (max-width: 992px) {
+    @media (max-width: 992px) {
       font-size: 1.5rem;
       text-transform: uppercase;   
-      }
+    }
   }
 
   // .header__action
